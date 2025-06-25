@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>じゃんけんアプリ</title>
+    <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="janken.css">
 </head>
 <body>
     <div class="container">
-        <h1>🎯 じゃんけんゲーム</h1>
+        <h1>🎯 ROCK PAPER SCISSORS</h1>
         
         <div class="game-area">
             <div id="startScreen">
-                <p>じゃんけんを始めましょう！</p>
-                <button class="start-btn" onclick="startGame()">🎯 ゲーム開始</button>
+                <p>Ready to play the ultimate battle of hands?</p>
+                <button class="start-btn" onclick="startGame()">🎯 START GAME</button>
             </div>
             
             <div id="animationScreen" class="hidden">
-                <p>コンピュータが手を選んでいます...</p>
+                <p>Computer is choosing...</p>
                 <div class="animation-display">
                     <div id="animatedChoice">✊</div>
                 </div>
-                <p>あなたの手を選んでください：</p>
+                <p>Choose your weapon:</p>
                 <div class="choices">
-                    <button class="choice-btn" onclick="selectPlayerChoice('rock')">✊<br>グー</button>
-                    <button class="choice-btn" onclick="selectPlayerChoice('paper')">✋<br>パー</button>
-                    <button class="choice-btn" onclick="selectPlayerChoice('scissors')">✌️<br>チョキ</button>
+                    <button class="choice-btn" onclick="selectPlayerChoice('rock')">✊<br>ROCK</button>
+                    <button class="choice-btn" onclick="selectPlayerChoice('paper')">✋<br>PAPER</button>
+                    <button class="choice-btn" onclick="selectPlayerChoice('scissors')">✌️<br>SCISSORS</button>
                 </div>
             </div>
         </div>
@@ -34,33 +34,33 @@
             <div id="gameResult" class="hidden">
                 <div class="battle-display">
                     <div class="player-side">
-                        <h3>あなた</h3>
+                        <h3>PLAYER</h3>
                         <div id="playerChoice" class="choice-display"></div>
                     </div>
                     <div class="vs">VS</div>
                     <div class="computer-side">
-                        <h3>コンピュータ</h3>
+                        <h3>COMPUTER</h3>
                         <div id="computerChoice" class="choice-display"></div>
                     </div>
                 </div>
                 <div id="result" class="result"></div>
-                <button class="play-again-btn" onclick="resetRound()">もう一度プレイ</button>
+                <button class="play-again-btn" onclick="resetRound()">PLAY AGAIN</button>
             </div>
         </div>
         
         <div class="score">
             <div class="score-item">
-                <strong>あなた:</strong> <span id="playerScore">0</span>勝
+                <strong>PLAYER:</strong> <span id="playerScore">0</span> WINS
             </div>
             <div class="score-item">
-                <strong>コンピュータ:</strong> <span id="computerScore">0</span>勝
+                <strong>COMPUTER:</strong> <span id="computerScore">0</span> WINS
             </div>
             <div class="score-item">
-                <strong>引き分け:</strong> <span id="drawScore">0</span>回
+                <strong>DRAWS:</strong> <span id="drawScore">0</span>
             </div>
         </div>
         
-        <button class="reset-btn" onclick="resetGame()">スコアリセット</button>
+        <button class="reset-btn" onclick="resetGame()">RESET SCORE</button>
     </div>
 
     <script src="janken.js"></script>

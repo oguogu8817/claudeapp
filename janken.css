@@ -6,6 +6,10 @@ body {
     padding: 20px;
 }
 
+.hidden {
+    display: none;
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -46,6 +50,84 @@ h1 {
     background-color: #007bff;
     color: white;
     transform: scale(1.1);
+}
+
+.start-btn {
+    padding: 20px 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 20px 0;
+}
+
+.start-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.animation-display {
+    margin: 30px 0;
+}
+
+#animatedChoice {
+    font-size: 80px;
+    animation: bounce 0.5s infinite;
+    display: inline-block;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.battle-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.player-side, .computer-side {
+    flex: 1;
+    max-width: 150px;
+}
+
+.choice-display {
+    font-size: 60px;
+    margin: 10px 0;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vs {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 0 20px;
+}
+
+.play-again-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.play-again-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 .result-area {

@@ -11,19 +11,41 @@
         <h1>🎯 じゃんけんゲーム</h1>
         
         <div class="game-area">
-            <p>あなたの手を選んでください：</p>
+            <div id="startScreen">
+                <p>じゃんけんを始めましょう！</p>
+                <button class="start-btn" onclick="startGame()">🎯 ゲーム開始</button>
+            </div>
             
-            <div class="choices">
-                <button class="choice-btn" onclick="playGame('rock')">✊<br>グー</button>
-                <button class="choice-btn" onclick="playGame('paper')">✋<br>パー</button>
-                <button class="choice-btn" onclick="playGame('scissors')">✌️<br>チョキ</button>
+            <div id="animationScreen" class="hidden">
+                <p>コンピュータが手を選んでいます...</p>
+                <div class="animation-display">
+                    <div id="animatedChoice">✊</div>
+                </div>
+                <p>あなたの手を選んでください：</p>
+                <div class="choices">
+                    <button class="choice-btn" onclick="selectPlayerChoice('rock')">✊<br>グー</button>
+                    <button class="choice-btn" onclick="selectPlayerChoice('paper')">✋<br>パー</button>
+                    <button class="choice-btn" onclick="selectPlayerChoice('scissors')">✌️<br>チョキ</button>
+                </div>
             </div>
         </div>
         
         <div class="result-area">
-            <div id="playerChoice"></div>
-            <div id="computerChoice"></div>
-            <div id="result" class="result"></div>
+            <div id="gameResult" class="hidden">
+                <div class="battle-display">
+                    <div class="player-side">
+                        <h3>あなた</h3>
+                        <div id="playerChoice" class="choice-display"></div>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="computer-side">
+                        <h3>コンピュータ</h3>
+                        <div id="computerChoice" class="choice-display"></div>
+                    </div>
+                </div>
+                <div id="result" class="result"></div>
+                <button class="play-again-btn" onclick="resetRound()">もう一度プレイ</button>
+            </div>
         </div>
         
         <div class="score">

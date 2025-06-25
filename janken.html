@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけんアプリ</title>
+    <link rel="stylesheet" href="janken.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 じゃんけんゲーム</h1>
+        
+        <div class="game-area">
+            <p>あなたの手を選んでください：</p>
+            
+            <div class="choices">
+                <button class="choice-btn" onclick="playGame('rock')">✊<br>グー</button>
+                <button class="choice-btn" onclick="playGame('paper')">✋<br>パー</button>
+                <button class="choice-btn" onclick="playGame('scissors')">✌️<br>チョキ</button>
+            </div>
+        </div>
+        
+        <div class="result-area">
+            <div id="playerChoice"></div>
+            <div id="computerChoice"></div>
+            <div id="result" class="result"></div>
+        </div>
+        
+        <div class="score">
+            <div class="score-item">
+                <strong>あなた:</strong> <span id="playerScore">0</span>勝
+            </div>
+            <div class="score-item">
+                <strong>コンピュータ:</strong> <span id="computerScore">0</span>勝
+            </div>
+            <div class="score-item">
+                <strong>引き分け:</strong> <span id="drawScore">0</span>回
+            </div>
+        </div>
+        
+        <button class="reset-btn" onclick="resetGame()">スコアリセット</button>
+    </div>
+
+    <script src="janken.js"></script>
+</body>
+</html>

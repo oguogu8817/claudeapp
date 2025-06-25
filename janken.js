@@ -5,9 +5,9 @@ let animationInterval = null;
 let isAnimating = false;
 
 const choices = {
-    rock: { name: 'グー', emoji: '✊' },
-    paper: { name: 'パー', emoji: '✋' },
-    scissors: { name: 'チョキ', emoji: '✌️' }
+    rock: { name: 'ROCK', emoji: '✊' },
+    paper: { name: 'PAPER', emoji: '✋' },
+    scissors: { name: 'SCISSORS', emoji: '✌️' }
 };
 
 function getComputerChoice() {
@@ -80,15 +80,15 @@ function selectPlayerChoice(playerChoice) {
     const resultElement = document.getElementById('result');
     
     if (winner === 'player') {
-        resultElement.textContent = '🎉 あなたの勝ち！';
+        resultElement.textContent = '🎉 PLAYER WINS!';
         resultElement.className = 'result win';
         playerScore++;
     } else if (winner === 'computer') {
-        resultElement.textContent = '😔 コンピュータの勝ち...';
+        resultElement.textContent = '🔥 COMPUTER WINS!';
         resultElement.className = 'result lose';
         computerScore++;
     } else {
-        resultElement.textContent = '🤝 引き分け';
+        resultElement.textContent = '🤝 IT\'S A DRAW!';
         resultElement.className = 'result draw';
         drawScore++;
     }
